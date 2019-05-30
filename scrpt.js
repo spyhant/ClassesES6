@@ -1,4 +1,4 @@
-function reverse(data) {
+/*  function reverse(data) {
     var letters = [],
         l = data.length;
     while (l--) {
@@ -24,4 +24,40 @@ function isPalindrome(word) {
 butt.onclick = function () {
     let val = document.getElementById('elem1').value;
     console.log(isPalindrome(val));
-};
+};  */
+
+/* let age = document.getElementById('age').value;
+console.log(age);
+
+function showUser(surname, name) {
+    this.name = name;
+    this.surname = surname;
+    this.value = age;
+    alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
+}
+showUser('Lobach', 'Alex'); */
+"use strict"
+
+class Options {
+    constructor(height, width, bg, fontSize, textAlign) {
+        this.height = height;
+        this.width = width;
+        this.bg = bg;
+        this.fontSize = fontSize;
+        this.textAlign = textAlign;
+    }
+    createDiv() {
+        var elem = document.createElement('div');
+        elem.style.width = this.width;
+        elem.style.height = this.height;
+        elem.style.background = this.bg;
+        elem.style.fontSize = this.fontSize;
+        elem.style.textAlign = this.textAlign;
+        elem.innerHTML = "Hello Alex";
+        
+        elem.style.cssText += 'color: white;'
+        document.body.appendChild(elem);
+    }
+}
+const diven = new Options("100px", "200px", "green", "20px", " center");
+diven.createDiv();
